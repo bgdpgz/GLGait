@@ -341,7 +341,7 @@ block_map = {'BasicBlock': BasicBlock,
              'BasicBlock_3D': BasicBlock_3D,
              'BasicBlock2D_trans3': BasicBlock2D_trans3}
 
-class DeepGaitP3D_trans(nn.Module):
+class GLGait(nn.Module):
     def __init__(self, block, channels=[32, 64, 128, 256], in_channel=1, layers=[1, 2, 2, 1], strides=[1, 2, 2, 1],
                  maxpool=True):
         if block in block_map.keys():
