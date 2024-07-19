@@ -15,3 +15,5 @@ Using the command: CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --n
 * --nproc_per_node: The number of gpus to use, and it must equal the length of CUDA_VISIBLE_DEVICES.
 * --cfgs: The path to config file.
 * --phase: Specified as train or test.
+# Acknowledge
+The codebase is based on [OpenGait](https://github.com/ShiqiYu/OpenGait).
