@@ -349,7 +349,7 @@ class DeepGaitP3D_trans(nn.Module):
         else:
             raise ValueError(
                 "Error type for -block-Cfg-, supported: 'BasicBlock' or 'Bottleneck'.")
-        block3D = block_map['BasicBlockP3D']
+        block3D = block_map['BasicBlock2D_trans3']
         self.maxpool_flag = maxpool
         super(DeepGaitP3D_trans, self).__init__()
         self._norm_layer = nn.BatchNorm2d
