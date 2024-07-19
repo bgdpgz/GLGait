@@ -42,7 +42,7 @@ loss_cfg:
 model_cfg:
   model: Baseline_trans
   backbone_cfg:
-    type: DeepGaitP3D_trans
+    type: GLGait
     block: BasicBlock
     channels: # Layers configuration for automatically model construction
       - 64
