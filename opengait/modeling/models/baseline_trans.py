@@ -53,7 +53,7 @@ class Baseline_trans(BaseModel):
             retval = {
                 'training_feat': {
                     #'triplet': {'embeddings': embed_1, 'labels': labs},
-                    'triplet8124': {'embeddings': embed_1, 'labels': labs, 'bnn': bnn},
+                    'ctl': {'embeddings': embed_1, 'labels': labs, 'bnn': bnn},
                     'softmax': {'logits': logits, 'labels': labs, },
                 },
                 'visual_summary': {
