@@ -4,8 +4,8 @@ Paper has been accepted in ACM MM 2024. This is the code for it.
 ## Pytorch Environment
 * Pytorch=1.11.0
 # CheckPoints
-* The checkpoint (GLGait-H) for Gait3D [link](https://pan.baidu.com/s/1AJc8XXqssal_8NMJ1UXpzA?pwd=1357).
-* The checkpoint (GLGait-L) for Gait3D [link](https://pan.baidu.com/s/1H7h4xf5i57R1tEHrtEIzvg?pwd=ncim).
+* The checkpoint for Gait3D [link](链接：https://pan.baidu.com/s/1quNAQ1pTOHUa3tpfGCQ7IQ?pwd=fue3).
+* The checkpoint for GREW [link](https://pan.baidu.com/s/1H7h4xf5i57R1tEHrtEIzvg?pwd=ncim).
 # Train and Test
 ## Train
 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=1354 opengait/main.py --cfgs ./configs/GLGait/GLGait_Gait3D.yaml --phase train
