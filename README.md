@@ -4,7 +4,7 @@ Paper has been accepted in ACM MM 2024. This is the code for it.
 ## Pytorch Environment
 * Pytorch=1.11.0
 # CheckPoints
-* The checkpoint for Gait3D [link](链接：https://pan.baidu.com/s/1quNAQ1pTOHUa3tpfGCQ7IQ?pwd=fue3).
+* The checkpoint for Gait3D [link](https://pan.baidu.com/s/1quNAQ1pTOHUa3tpfGCQ7IQ?pwd=fue3).
 * The checkpoint for GREW [link](https://pan.baidu.com/s/1H7h4xf5i57R1tEHrtEIzvg?pwd=ncim).
 # Train and Test
 ## Train
