@@ -74,9 +74,9 @@ class TripletLoss(BaseLoss):
 
 
 
-class TripletDouble8124Loss(BaseLoss):
+class CTL(BaseLoss):
     def __init__(self, margin, loss_term_weight=1.0, start=30000,):
-        super(TripletDouble8124Loss, self).__init__(loss_term_weight)
+        super(CTL, self).__init__(loss_term_weight)
         self.margin = margin
         self.count = 0
         self.start = start
