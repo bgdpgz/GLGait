@@ -29,8 +29,8 @@ loss_cfg:
   - loss_term_weight: 1.0
     margin: 0.2
     start: 30000
-    type: TripletDouble8124Loss
-    log_prefix: triplet8124
+    type: CTL
+    log_prefix: ctl
   - loss_term_weight: 1.0
     scale: 16
     type: CrossEntropyLoss
