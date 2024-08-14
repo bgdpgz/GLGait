@@ -66,7 +66,7 @@ model_cfg:
     parts_num: 16
   SeparateBNNecks:
     class_num: 3000
-    in_channels: 2566
+    in_channels: 256
     parts_num: 16
   bin_num:
     - 16
