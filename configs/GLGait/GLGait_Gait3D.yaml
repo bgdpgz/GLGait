@@ -94,7 +94,7 @@ trainer_cfg:
   restore_ckpt_strict: true
   restore_hint: 0
   save_iter: 10000
-  save_name: 
+  save_name: your name
   sync_BN: true
   total_iter: 120000
   sampler:
