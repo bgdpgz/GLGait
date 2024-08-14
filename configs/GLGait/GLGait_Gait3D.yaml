@@ -45,10 +45,10 @@ model_cfg:
     type: GLGait
     block: BasicBlock
     channels: # Layers configuration for automatically model construction
+      - 64
       - 128
       - 256
       - 512
-      - 1024
     layers:
       - 1
       - 4
@@ -61,12 +61,12 @@ model_cfg:
       - 1
     maxpool: false
   SeparateFCs:
-    in_channels: 1024
-    out_channels: 512
+    in_channels: 512
+    out_channels: 256
     parts_num: 16
   SeparateBNNecks:
     class_num: 3000
-    in_channels: 512
+    in_channels: 2566
     parts_num: 16
   bin_num:
     - 16
