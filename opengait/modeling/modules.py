@@ -157,45 +157,6 @@ class SeparateFCs(nn.Module):
             out = x.matmul(self.fc_bin)
         return out.permute(1, 2, 0).contiguous()
 
-
-class HP_FQB(nn.Module):
-    def __init__(self, bin_num=None):
-        super(HP_FQB, self).__init__()
-        if bin_num is None:
-            bin_num = [16, 8, 4, 2, 1]
-        self.bin_num = bin_num
-        #self.fc1 = nn.Linear(256,128)
-        self.fc2 = nn.Linear(256,256)
-        self.relu = nn.ReLU(inplace=True)
-        self.fc3 = nn.Linear(256,256)
-        self.sig = nn.Sigmoid()
-
-    def forward(self, x):
-        """
-            x  : [n, c, s, h, w]
-            ret: [n, p, s, c]
-        """
-        n, c, s = x.size()[:3]
-        features = []
-        for b in self.bin_num:
-            z = x.view(n, c, s, b, -1)
-            z = z.mean(-1) + z.max(-1)[0]
-            features.append(z)
-        features = torch.cat(features, -1) #[n, c, s, p]
-        features = features.permute(0,3,2,1) #[n,p,s,c]
-        #features = self.fc1(features)
-
-        att0 = self.fc2(features)
-        att1 = self.relu(att0)
-        att2 = self.fc3(att1)
-        att = self.sig(att2)
-
-        features = features*att
-
-        features = torch.max(features, dim=2)[0]
-        features = features.permute(0,2,1) #[n,c,p]
-        return features,att
-
 class SeparateBNNecks(nn.Module):
     """
         Bag of Tricks and a Strong Baseline for Deep Person Re-Identification
@@ -230,12 +191,6 @@ class SeparateBNNecks(nn.Module):
             x = torch.cat([bn(_x) for _x, bn in zip(
                 x.split(1, 2), self.bn1d)], 2)  # [p, n, c]
         feature = x.permute(2, 0, 1).contiguous()
-        #self.fc_bin_norm = F.normalize(self.fc_bin, dim=1)
-        #np.save('/home/pengguozhen_2022/gait recognition/OpenGait-master/arc_att_dist.npy',self.fc_bin_norm.cpu().detach().numpy())
-        # self.fm = self.fc_bin_norm.permute(0,2,1).matmul(self.fc_bin_norm)
-        # self.fm[self.fm==1] = 0
-        # print(self.fm[0])
-        # print(torch.sort(self.fm[0],dim=1)[0])
         if self.norm:
             feature = F.normalize(feature, dim=-1)  # [p, n, c]
             logits = feature.matmul(F.normalize(
