@@ -8,9 +8,9 @@
 * The checkpoint for GREW [link](https://pan.baidu.com/s/1H41p_FQjSkL8Jn_2xWWsLA?pwd=soci).
 # Train and Test
 ## Train
-'''
+```
 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=1354 opengait/main.py --cfgs ./configs/GLGait/GLGait_Gait3D.yaml --phase train
-'''
+```
 ## Test
 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=1354 opengait/main.py --cfgs ./configs/GLGait/GLGait_Gait3D.yaml --phase test
 
