@@ -32,5 +32,5 @@ The codebase is based on [OpenGait](https://github.com/ShiqiYu/OpenGait).
   year={2024}
 }
 
-Note: This code is only used for academic purposes, people cannot use this code for anything that might be considered commercial use.
 ```
+Note: This code is only used for academic purposes, people cannot use this code for anything that might be considered commercial use.
