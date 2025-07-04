@@ -6,7 +6,7 @@
 * Python=3.8
 # CheckPoints
 * The checkpoint for Gait3D BaiduNetdisk [link](https://pan.baidu.com/s/1quNAQ1pTOHUa3tpfGCQ7IQ?pwd=fue3), huggingface [link](https://huggingface.co/bgdpgz/GLGait/tree/main/GLGait).
-* The checkpoint for GREW BaiduNetdisk [link](https://pan.baidu.com/s/1H41p_FQjSkL8Jn_2xWWsLA?pwd=soci), huggingface [link](https://huggingface.co/bgdpgz/GLGait/tree/main/GLGait)..
+* The checkpoint for GREW BaiduNetdisk [link](https://pan.baidu.com/s/1H41p_FQjSkL8Jn_2xWWsLA?pwd=soci), huggingface [link](https://huggingface.co/bgdpgz/GLGait/tree/main/GLGait).
 # Train and Test
 ## Train
 ```
